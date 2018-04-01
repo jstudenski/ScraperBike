@@ -9,6 +9,8 @@ var HeadlineSchema = new Schema({
   // `title` is required and of type String
   title: {
     type: String,
+    trim: true,
+    unique: true,
     required: "Title is Required"
   },
   link: {
