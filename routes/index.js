@@ -8,31 +8,39 @@ var cheerio = require("cheerio");
 module.exports = function(app) {
 
   app.get("/", function(req, res) {
-    // Make a request for the news section of ycombinator
-    //request("https://news.ycombinator.com/", function(error, response, html) {
+
+
+    // other pages
+    // http://www.xxlmag.com/page/2/
+
+
     request("http://www.xxlmag.com/", function(error, response, html) {
       
       var $ = cheerio.load(html);
 
-//blogroll-inner
-
-     // $(".title").each(function(i, element) {
-      $('.blogroll-inner').children("article").each(function(i, element) {
+      $('.main-content .blogroll-inner').children("article").each(function(i, element) {
 
        // article
 
         var result = {};
 
-        result.title = $(element).text();
+        result.title = $(element).children('.content').children('a').text();
+        result.excerpt = $(element).children('.content').children('div.excerpt').text();
+        result.dateAdded = $(element).children('.content').children('time').attr('datetime'); // .attr("data-image");
+
         result.link = $(element).children('figure').children('a').attr("href");     
         result.test = $(element).children('figure').children('a').attr("data-image");
-  
+
+
+      //  datetime
 
 
         console.log("--------------------");
         console.log(result.title);
+        console.log(result.excerpt);
         console.log(result.link);
         console.log(result.test);
+        console.log(result.dateAdded);
         console.log("--------------------");
 
         // db.Headline.create(result)  // create
