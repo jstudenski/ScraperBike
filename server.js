@@ -5,6 +5,9 @@ var bodyParser = require("body-parser");
 var cheerio = require("cheerio");
 var request = require('request');
 
+var logger = require("morgan");
+
+
 
 // Require all models
 var db = require("./models");
@@ -14,17 +17,21 @@ var PORT = 3000;
 // Initialize Express
 var app = express();
 
+
+app.use(logger("dev"));
 // Sets up the Express app to handle data parsing
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 // parse application/json
 app.use(bodyParser.json());
 // Static directory
 app.use(express.static("public"));
 
+
 // Routes
 // =============================================================
 require("./routes/index.js")(app);
+
 
 
 // If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
@@ -36,6 +43,7 @@ mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI, {
  // useMongoClient: true
 });
+
 
 
 // Start the server

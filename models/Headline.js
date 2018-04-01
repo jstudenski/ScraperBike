@@ -9,12 +9,17 @@ var HeadlineSchema = new Schema({
   // `title` is required and of type String
   title: {
     type: String,
-    required: true
+    required: "Title is Required"
   },
-  // `link` is required and of type String
   link: {
     type: String,
-    required: true
+    required: true,
+    validate: [
+      function(input) {
+        return input.length >= 10;
+      },
+      "Url should be longer."
+    ]
   },
   // `note` is an object that stores a Note id
   // The ref property links the ObjectId to the Note model
