@@ -14,6 +14,18 @@ var PORT = 3000;
 // Initialize Express
 var app = express();
 
+// Sets up the Express app to handle data parsing
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }));
+// parse application/json
+app.use(bodyParser.json());
+// Static directory
+app.use(express.static("public"));
+
+// Routes
+// =============================================================
+require("./routes/index.js")(app);
+
 
 // If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
@@ -22,7 +34,7 @@ var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines
 // Connect to the Mongo DB
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI, {
-  useMongoClient: true
+ // useMongoClient: true
 });
 
 
