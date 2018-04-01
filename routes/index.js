@@ -9,7 +9,9 @@ module.exports = function(app) {
 
   app.get("/", function(req, res) {
     // Make a request for the news section of ycombinator
-    request("https://news.ycombinator.com/", function(error, response, html) {
+    //request("https://news.ycombinator.com/", function(error, response, html) {
+    request("http://www.xxlmag.com/", function(error, response, html) {
+      
 
       // Load the html body from request into cheerio
       var $ = cheerio.load(html);
@@ -19,7 +21,10 @@ module.exports = function(app) {
         var result = {};
         result.title = $(element).children("a").text();
         result.link = $(element).children("a").attr("href");
-        
+
+        result.title = $(element).text();
+        result.link = $(element).attr("href");
+
         // make sure title and like are both present
 // if (result.title && result.link) {
 
