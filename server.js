@@ -18,6 +18,12 @@ var PORT = 3000;
 var app = express();
 
 
+// Handlebars
+var exphbs = require("express-handlebars");
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
+
 app.use(logger("dev"));
 // Sets up the Express app to handle data parsing
 // parse application/x-www-form-urlencoded
@@ -31,7 +37,6 @@ app.use(express.static("public"));
 // Routes
 // =============================================================
 require("./routes/index.js")(app);
-
 
 
 // If deployed, use the deployed database. Otherwise use the local mongoHeadlines database

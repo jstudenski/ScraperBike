@@ -13,6 +13,10 @@ var HeadlineSchema = new Schema({
     unique: true,
     required: "Title is Required"
   },
+  excerpt: {
+    type: String,
+    required: true
+  },
   link: {
     type: String,
     required: true,
@@ -23,13 +27,15 @@ var HeadlineSchema = new Schema({
       "Url should be longer."
     ]
   },
-  excerpt: {
-    type: String,
-    required: true
+  articleDate: {
+    type: Date
   },
   created: {
     type: Date,
     default: Date.now
+  },
+  imageURL: {
+    type: String
   },
   // `note` is an object that stores a Note id
   // The ref property links the ObjectId to the Note model
