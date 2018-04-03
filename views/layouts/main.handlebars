@@ -2,15 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
-
+    {{!-- CSS --}}
+    <link rel="stylesheet" href="/assets/css/reset.css" type="text/css"/>
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css"/>
 
 </head>
 
 <body>
 
-Hello World
-    {{{ body }}}
+  <div id="home">Home</div>
+  <div id="saved">Saved Articles</div>
+  <div id="scrape">Scrape New Articles</div>
 
+
+  {{{ body }}}
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/assets/js/app.js"></script>
 </body>
 </html>

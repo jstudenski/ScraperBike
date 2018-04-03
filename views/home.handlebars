@@ -1,4 +1,5 @@
-  {{#each Article}}
+{{#each Article}}
+  <article>
     {{this.title}}
     <br>
     {{this.excerpt}}
@@ -9,6 +10,8 @@
     <br>
     {{this.created}}
     <br>
-    {{this.imageURL}}
+    
+    <img src="{{this.imageURL}}" width="150">
     <br>    
-  {{/each}}
+  </article>
+{{/each}}

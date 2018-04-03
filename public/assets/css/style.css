@@ -1,0 +1,9 @@
+body{
+	background-color: #FE5F55;
+}
+
+article {
+  border: 1px solid #888;
+  margin: 25px;
+  background-color: #fff;
+}
