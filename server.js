@@ -1,25 +1,23 @@
-var express = require("express");
-var exphbs = require("express-handlebars");
-var mongoose = require("mongoose");
-var bodyParser = require("body-parser");
-var cheerio = require("cheerio");
-var request = require('request');
+const express = require("express");
+const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
+const cheerio = require("cheerio");
+const request = require('request');
 
-var logger = require("morgan");
-
+const logger = require("morgan");
 
 
 // Require all models
-var db = require("./models");
+const db = require("./models");
 
-var PORT = 3000;
+const PORT = 3000;
 
 // Initialize Express
-var app = express();
+const app = express();
 
 
 // Handlebars
-var exphbs = require("express-handlebars");
+const exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
