@@ -1,13 +1,21 @@
 // Requiring our models
 var db = require("../models");
 
+// var scrape = require('../scripts/scrape.js');
+
+
 var request = require("request");
 var cheerio = require("cheerio");
 
 // Routes
 module.exports = function(app) {
 
+
+//  app.get("/api/scrape", scrapeCtrl.getNYT)
+
   app.get("/", function(req, res) {
+
+    // console.log(scrape());
 
     //   models.Post.findAll({
     //     //include: [models.Category]
