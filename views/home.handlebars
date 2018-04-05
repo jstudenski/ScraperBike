@@ -1,5 +1,7 @@
+
+<div id="articles">
 {{#each Article}}
-  <article>
+  <article data-id="{{this._id}}">
     {{this.title}}
     <br>
     {{this.excerpt}}
@@ -15,3 +17,7 @@
     <br>    
   </article>
 {{/each}}
+</div>
+<div id="notes">
+  11111
+</div>

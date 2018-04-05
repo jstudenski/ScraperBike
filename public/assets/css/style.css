@@ -9,3 +9,16 @@ article {
   margin: 25px;
   background-color: #fff;
 }
+
+#articles {
+  background-color: salmon;
+  width: 60%;
+  float: left;
+}
+
+#notes {
+  border: 1px solid #999;
+  width: 40%;
+  box-sizing: border-box;
+  float: left;
+}
