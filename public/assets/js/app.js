@@ -19,7 +19,10 @@ $(document).on("click", "#saved", function() {
 // Clicking an item
 
 $(document).on("click", "article", function() {
-  console.log('ARTICLE!');
+
+  // add class for css styling
+  $(this).addClass('active').siblings().removeClass('active')
+
 
   $("#notes").empty();
   // Save the id from the p tag
