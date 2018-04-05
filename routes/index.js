@@ -1,11 +1,10 @@
 // Requiring our models
-var db = require("../models");
+const db = require("../models");
 
 // var scrape = require('../scripts/scrape.js');
 
-
-var request = require("request");
-var cheerio = require("cheerio");
+const request = require("request");
+const cheerio = require("cheerio");
 
 // Routes
 module.exports = function(app) {

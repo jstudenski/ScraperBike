@@ -1,8 +1,8 @@
-var request = require("request");
-var cheerio = require("cheerio");
+const request = require("request");
+const cheerio = require("cheerio");
 
 
-var scrape = function(){
+const scrape = function(){
 
     // other pages
     // http://www.xxlmag.com/page/2/

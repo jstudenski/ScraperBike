@@ -46,6 +46,6 @@ const HeadlineSchema = new Schema({
 });
 
 // This creates our model from the above schema, using mongoose's model method
-var Headline = mongoose.model("Headline", HeadlineSchema);
+const Headline = mongoose.model("Headline", HeadlineSchema);
 
 module.exports = Headline;
