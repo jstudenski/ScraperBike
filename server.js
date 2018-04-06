@@ -10,7 +10,7 @@ const logger = require("morgan");
 // Require all models
 const db = require("./models");
 
-const PORT = 3000;
+const PORT = 3030;
 
 // Initialize Express
 const app = express();
