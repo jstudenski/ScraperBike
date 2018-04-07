@@ -2,18 +2,13 @@ html, body {
   height: 100%;
 }
 
-body {
-  /*	background-color: #FE5F55;*/
-  /*  background-color: #fff4ef; */ 
-
-
-  
+body {  
   font-family: 'Roboto', sans-serif;
   height: 100%;
   margin: 0;
   padding: 0;
   background-color: #212027;
-
+  color: #363636;
 }
 
 h1 {
@@ -37,56 +32,47 @@ article {
   position: relative;
   border-radius: 8px 8px 8px 8px;
   overflow: hidden;
-
 }
 
-body {
-color: #363636;;
-}
-
-button {
+#savenote {
   font-family: 'Jua', sans-serif;
+  font-size: 20px;
   border: none;
   background-color: #fff4ee;
   width: 100%;
   position: absolute;
-  bottom: 0px;
-  left: 0px;
+  bottom: 0;
+  left: 0;
   height: 40px;
-  font-size: 20px;
 }
 
-button:hover {
-  background-color: #F6ECE7;
+#savenote:hover {
+  background-color: #fff;
 }
 
 .excerpt {
-/*  background-color: salmon;*/
   float: left;
   width: 450px;
   margin-top: 40px;
   line-height: 24px;
   font-size: 16px;
   box-sizing: border-box;
-  padding: 8px 16px 0px 16px;
-/*  color: #212027;*/
-
+  padding: 8px 16px 0 16px;
 }
 
 .active {
-    border-radius: 8px 0px 0px 8px;
+  border-radius: 8px 0 0 8px;
   background-color: #212027;
-  margin: 40px 0 0 0px;
- /* margin-right: 0px;*/
+  margin: 40px 0 0 0;
   padding-right: 25px;
   color: #fff;
 }
+
 .active h1 {
   color: #212027;
-  margin-right: -25px;
+  margin: 0px -25px 0px 0;
+  padding-right: 37px;
 }
-
-
 
 article img {
   float: left;
@@ -95,19 +81,8 @@ article img {
 
 article .title {
   position: relative;
-/*  top: 25px;*/
   background-color: #fff;
 }
-
-
-article .title {
-
-}
-
-
-
-
-
 
 .note-container {
   float: right;
@@ -117,11 +92,10 @@ article .title {
   padding: 0;
   margin: 0;
   width: 400px;
-  /*width: 25%;*/
 }
 
 #titleinput {
-    font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
   padding: 8px;
   font-size: 20px;
   width: 100%;
@@ -151,7 +125,6 @@ article .title {
   display: none;
   width: 300px;
   height: 300px;
-/*  background: rgba(255, 255, 255, .6);*/
   background-color: #a6a5a8;
   position: fixed;
   top: 0;
@@ -160,9 +133,7 @@ article .title {
   margin: auto;
   border-radius: 5px;
   box-sizing: border-box;
-
 }
-
 
 @media (min-width: 700px) { @content; 
   #articles {
@@ -223,6 +194,3 @@ article .title {
     right: 200px;
   }
 }
-
-
-
