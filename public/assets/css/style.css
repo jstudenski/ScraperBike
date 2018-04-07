@@ -132,7 +132,8 @@ article .title {
 }
 
 #bodyinput {
-    font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
   padding: 8px;
   width: 100%;
   height: 100%;

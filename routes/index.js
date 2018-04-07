@@ -43,7 +43,9 @@ module.exports = function(app) {
     });
 
 
-    db.Headline.find({})
+    db.Headline.find({
+
+    }).sort( { articleDate: -1 } )
     .then(function(dbArticle) {
       console.log(dbArticle)
       const object = { Article: dbArticle };

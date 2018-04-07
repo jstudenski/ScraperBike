@@ -45,7 +45,7 @@ $(document).on("click", "article", function() {
       $("#notes").append("<textarea id='bodyinput' name='body'></textarea>");
       // A button to submit a new note, with the id of the article saved to it
       $("#notes").append("<button data-id='" + data._id + "' id='savenote'>Save Note</button>");
-
+      $('#savenote').hide();
       // If there's a note in the article
       if (data.note) {
 
@@ -55,7 +55,16 @@ $(document).on("click", "article", function() {
         $("#bodyinput").val(data.note.body);
       }
     });
-}); // click article
+}); // click artic
+
+
+
+
+$(document).on("keypress", "#titleinput, #bodyinput", function() {
+ console.log($(this).closest('div').find('button').show());
+ // $('#savenote').show();
+});
+
 
 
 
@@ -79,11 +88,8 @@ $(document).on("click", "#savenote", function() {
     .then(function(data) {
       // Log the response
       console.log(data);
-      // Empty the notes section
-      $("#notes").empty();
     });
+  // hide save button  
+  console.log($(this).hide())
 
-  // Also, remove the values entered in the input and textarea for note entry
-  $("#titleinput").val("");
-  $("#bodyinput").val("");
 }); // click savenote
