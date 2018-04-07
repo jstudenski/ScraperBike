@@ -62,7 +62,6 @@ $(document).on("click", "article", function() {
 
 $(document).on("keypress", "#titleinput, #bodyinput", function() {
  console.log($(this).closest('div').find('button').show());
- // $('#savenote').show();
 });
 
 
