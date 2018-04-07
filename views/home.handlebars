@@ -2,34 +2,37 @@
 <div id="articles">
 {{#each Article}}
   <article data-id="{{this._id}}">
-    <h1>{{this.title}}</h1>
-    <br>
-    {{this.excerpt}}
-    <br>
+
+
+    <div class="title">
+      <h1>{{this.title}}</h1>
+    </div>
+
+    <img src="{{this.imageURL}}" width="150">
+
+    <div class="excerpt">
+      {{this.excerpt}}
+    </div>
+
+
+
+{{!--     <br>
     {{this.link}}
     <br>
     {{this.articleDate}}
     <br>
     {{this.created}}
-    <br>
+    <br> --}}
     
-    <img src="{{this.imageURL}}" width="150">
-    <br>    
   </article>
 {{/each}}
 </div>
 
 
 
-
 <div class="note-container">
 
-{{!--   <div class="heading">
-    A
-  </div> --}}
-
   <div id="notes">
-    11111
   </div>
   
 </div>

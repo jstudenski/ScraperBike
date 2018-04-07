@@ -36,6 +36,7 @@ $(document).on("click", "article", function() {
     // With that done, add the note information to the page
     .then(function(data) {
       console.log(data);
+      $("#notes").show();
       // The title of the article
      // $("#notes").append("<h2>" + data.title + "</h2>");
       // An input to enter a new title
@@ -47,6 +48,7 @@ $(document).on("click", "article", function() {
 
       // If there's a note in the article
       if (data.note) {
+
         // Place the title of the note in the title input
         $("#titleinput").val(data.note.title);
         // Place the body of the note in the body textarea
