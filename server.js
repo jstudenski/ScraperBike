@@ -10,7 +10,7 @@ const logger = require("morgan");
 // Require all models
 const db = require("./models");
 
-const PORT = 3030;
+const PORT = 3000;
 
 // Initialize Express
 const app = express();
@@ -36,8 +36,7 @@ app.use(express.static("public"));
 // =============================================================
 require("./routes/index.js")(app);
 
-
-// If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
+// If deploed, use the deployed database. Otherwise use the local mongoHeadlines database
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 
 // Set mongoose to leverage built in JavaScript ES6 Promises
@@ -46,7 +45,6 @@ mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI, {
  // useMongoClient: true
 });
-
 
 // Start the server
 app.listen(PORT, function() {
