@@ -34,6 +34,17 @@ article {
   overflow: hidden;
 }
 
+article img {
+  float: left;
+  width: 200px;
+}
+
+article .title {
+  position: relative;
+  background-color: #fff;
+}
+
+
 #savenote {
   font-family: 'Jua', sans-serif;
   font-size: 20px;
@@ -74,26 +85,6 @@ article {
   padding-right: 37px;
 }
 
-article img {
-  float: left;
-  width: 200px;
-}
-
-article .title {
-  position: relative;
-  background-color: #fff;
-}
-
-.note-container {
-  float: right;
-  height: 700px;
-  background-color: lime;
-  position: relative;
-  padding: 0;
-  margin: 0;
-  width: 400px;
-}
-
 #titleinput {
   font-family: 'Roboto', sans-serif;
   padding: 8px;
@@ -119,6 +110,7 @@ article .title {
   background-color: #fff4ef;
   float: left;
   margin-right: 400px;
+  padding-bottom: 500px;
 }
 
 #notes {
@@ -138,47 +130,39 @@ article .title {
 @media (min-width: 700px) { 
   #articles {
     margin-right: 300px;
- /*   background-color: yellow;*/
   }
   #notes {
     right: 25px;
     width: 250px;
     padding: 15px 15px 120px 15px;
   }
-
 }
 
 @media (min-width: 1150px) {
   #articles {
     margin-right: 400px;
- /*   background-color: blue;*/
   }
-
   #notes {
     right: 62.5px;
     width: 275px;
     padding: 30px 30px 120px 30px;
   }
-
 }
 
 @media (min-width: 1250px) {
   #articles {
     margin-right: 500px;
-/*    background-color: pink;*/
   }
   #notes {
     right: 100px;
     width: 300px;
     padding: 40px 40px 120px 40px;
   }
-
 }
 
 @media (min-width: 1400px) {
   #articles {
     margin-right: 600px;
-/*    background-color: red;*/
   }
   #notes {
     right: 150px;
@@ -188,7 +172,6 @@ article .title {
 @media (min-width: 1600px) { 
   #articles {
     margin-right: 700px;
-/*    background-color: purple;*/
   }
   #notes {
     right: 200px;

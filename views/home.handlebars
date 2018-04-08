@@ -3,7 +3,6 @@
 {{#each Article}}
   <article data-id="{{this._id}}">
 
-
     <div class="title">
       <h1>{{this.title}}</h1>
     </div>
@@ -14,25 +13,19 @@
       {{this.excerpt}}
     </div>
 
-{{!-- Additional Data  --}}
-
-{{!--  <br>
-    {{this.link}}
-    <br>
-    {{this.articleDate}}
-    <br>
-    {{this.created}}
-    <br> --}}
+  {{!-- Additional Data  --}}
+  {{!--  
+      <br>
+        {{this.link}}
+      <br>
+        {{this.articleDate}}
+      <br>
+        {{this.created}}
+      <br>
+  --}}
     
   </article>
 {{/each}}
 </div>
 
-
-
-<div class="note-container">
-
-  <div id="notes">
-  </div>
-  
-</div>
+<div id="notes"></div>

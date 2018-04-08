@@ -23,9 +23,8 @@ $(document).on("click", "article", function() {
   // add class for css styling
   $(this).addClass('active').siblings().removeClass('active')
 
-
   $("#notes").empty();
-  // Save the id from the p tag
+
   var thisId = $(this).attr("data-id");
   console.log(thisId);
 
@@ -37,31 +36,26 @@ $(document).on("click", "article", function() {
     .then(function(data) {
       console.log(data);
       $("#notes").show();
-      // The title of the article
-     // $("#notes").append("<h2>" + data.title + "</h2>");
-      // An input to enter a new title
+
       $("#notes").append("<input id='titleinput' name='title' >");
-      // A textarea to add a new note body
+
       $("#notes").append("<textarea id='bodyinput' name='body'></textarea>");
-      // A button to submit a new note, with the id of the article saved to it
+
       $("#notes").append("<button data-id='" + data._id + "' id='savenote'>Save Note</button>");
       $('#savenote').hide();
       // If there's a note in the article
       if (data.note) {
-
-        // Place the title of the note in the title input
         $("#titleinput").val(data.note.title);
-        // Place the body of the note in the body textarea
         $("#bodyinput").val(data.note.body);
       }
+      
     });
 }); // click artic
 
 
 $(document).on("keypress", "#titleinput, #bodyinput", function() {
- console.log($(this).closest('div').find('button').show());
+  $(this).closest('div').find('button').show();
 });
-
 
 // When you click the savenote button
 $(document).on("click", "#savenote", function() {
@@ -85,6 +79,6 @@ $(document).on("click", "#savenote", function() {
       console.log(data);
     });
   // hide save button  
-  console.log($(this).hide())
+  $(this).hide();
 
 }); // click savenote
