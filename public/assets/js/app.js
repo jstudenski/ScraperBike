@@ -58,13 +58,9 @@ $(document).on("click", "article", function() {
 }); // click artic
 
 
-
-
 $(document).on("keypress", "#titleinput, #bodyinput", function() {
  console.log($(this).closest('div').find('button').show());
 });
-
-
 
 
 // When you click the savenote button
